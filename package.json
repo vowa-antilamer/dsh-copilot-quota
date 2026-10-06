@@ -1,0 +1,58 @@
+{
+  "name": "dsh-copilot-quota",
+  "version": "0.1.0",
+  "description": "GitHub Copilot quota indicator for the DeepSeek Harness web GUI: the remaining chat, completion and AI-credit quota of the signed-in account, shown next to the composer.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.ru.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.1.0-rc.6 <0.3.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "github-copilot",
+    "copilot",
+    "quota",
+    "usage",
+    "web-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vowa-antilamer/dsh-copilot-quota.git"
+  },
+  "homepage": "https://github.com/vowa-antilamer/dsh-copilot-quota",
+  "bugs": {
+    "url": "https://github.com/vowa-antilamer/dsh-copilot-quota/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "client": {
+      "inject": [
+        "slots"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

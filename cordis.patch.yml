@@ -1,0 +1,6 @@
+# dsh bundle layer: mount the Copilot quota indicator.
+# Server half: index.js (HTTP route /copilot-quota/api).
+# Client half: client.js, served by dsh-client-modules for the web platform.
+- insert:
+    - id: copilot-quota
+      name: dsh-copilot-quota
